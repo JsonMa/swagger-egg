@@ -1,5 +1,5 @@
 {
-  "name": "egg-swagger-egg",
+  "name": "swagger-egg",
   "version": "1.0.0",
   "description": "swagger document generator for egg.",
   "eggPlugin": {
@@ -8,7 +8,16 @@
   "keywords": [
     "egg",
     "eggPlugin",
-    "egg-plugin"
+    "egg-plugin",
+    "swagger",
+    "swagger-doc",
+    "swagger-api",
+    "egg-swagger",
+    "swagger-egg",
+    "egg-swagger-doc",
+    "swagger-egg-doc",
+    "egg-swagger-document",
+    "swagger-egg-document"
   ],
   "dependencies": {},
   "devDependencies": {
@@ -45,12 +54,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-swagger-egg.git"
+    "url": "git+https://github.com/JsonMa/swagger-egg.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/JsonMa/swagger-egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-swagger-egg#readme",
-  "author": "jsonma",
+  "homepage": "https://github.com/JsonMa/swagger-egg#readme",
+  "author": "JsonMa",
   "license": "MIT"
 }
