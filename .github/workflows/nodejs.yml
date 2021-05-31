@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Swagger Egg CI
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [8, 10]
+        node-version: [8.x, 10.x, 12.x, 14.x, 15.x]
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
@@ -26,12 +26,25 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+        check-latest: true
+        # check and download the latest nodejs version(slower than using the cached version)
+
+    - name: Cache Node.js modules
+      uses: actions/cache@v2
+      with:
+        # npm cache files are stored in `~/.npm` on Linux/macOS
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+          ${{ runner.OS }}-
 
     - name: Install Dependencies
-      run: npm i -g npminstall && npminstall
+      run: npm ci
+      # https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable
 
     - name: Continuous Integration
       run: npm run ci
