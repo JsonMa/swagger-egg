@@ -9,12 +9,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/swagger-egg.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/swagger-egg
-[travis-image]: https://img.shields.io/travis/eggjs/swagger-egg.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/swagger-egg
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/swagger-egg.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/swagger-egg?branch=master
-[david-image]: https://img.shields.io/david/eggjs/swagger-egg.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/swagger-egg
+[travis-image]: https://img.shields.io/travis/jsonma/swagger-egg.svg?style=flat-square
+[travis-url]: https://travis-ci.org/jsonma/swagger-egg
+[codecov-image]: https://img.shields.io/codecov/c/github/jsonma/swagger-egg.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/jsonma/swagger-egg?branch=master
+[david-image]: https://img.shields.io/david/jsonma/swagger-egg.svg?style=flat-square
+[david-url]: https://david-dm.org/jsonma/swagger-egg
 [snyk-image]: https://snyk.io/test/npm/swagger-egg/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/swagger-egg
 [download-image]: https://img.shields.io/npm/dm/swagger-egg.svg?style=flat-square
@@ -36,7 +36,7 @@ $ npm i swagger-egg --save
 // {app_root}/config/plugin.js
 exports.swaggerEgg = {
   enable: true,
-  package: 'swagger-egg',
+  package: "swagger-egg",
 };
 ```
 
@@ -44,8 +44,7 @@ exports.swaggerEgg = {
 
 ```js
 // {app_root}/config/config.default.js
-exports.swaggerEgg = {
-};
+exports.swaggerEgg = {};
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.
@@ -57,6 +56,7 @@ see [config/config.default.js](config/config.default.js) for more detail.
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/JsonMa/swagger-egg/issues).
+
 ## License
 
 [MIT](LICENSE)
