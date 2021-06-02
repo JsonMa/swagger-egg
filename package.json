@@ -19,7 +19,9 @@
     "egg-swagger-document",
     "swagger-egg-document"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "swagger-ui-dist": "^3.49.0"
+  },
   "devDependencies": {
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
@@ -44,10 +46,8 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "files": [
-    "app.js",
-    "agent.js",
     "config",
-    "app"
+    "app.js"
   ],
   "ci": {
     "version": "8, 10"
