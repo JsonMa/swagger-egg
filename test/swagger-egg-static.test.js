@@ -17,14 +17,14 @@ describe('test/swagger-egg.test.js', () => {
   it('should GET /swagger/index.html', () => {
     return app.httpRequest()
       .get('/swagger/index.html')
-      .expect('Content-Type', "text/html; charset=utf-8")
+      .expect('Content-Type', 'text/html; charset=utf-8')
       .expect(200);
   });
 
   it('should GET /swagger/index.js', () => {
     return app.httpRequest()
       .get('/swagger/index.js')
-      .expect('Content-Type', "application/javascript; charset=utf-8")
+      .expect('Content-Type', 'application/javascript; charset=utf-8')
       .expect(200);
   });
 });
