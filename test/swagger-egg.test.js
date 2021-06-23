@@ -6,7 +6,7 @@ describe('test/swagger-egg.test.js', () => {
   let app;
   before(() => {
     app = mock.app({
-      baseDir: 'apps/swagger-egg-test',
+      baseDir: 'apps/swagger-egg-router-test',
     });
     return app.ready();
   });
@@ -14,10 +14,10 @@ describe('test/swagger-egg.test.js', () => {
   after(() => app.close());
   afterEach(mock.restore);
 
-  it('should GET /', () => {
+  it('should GET /homes', () => {
     return app.httpRequest()
-      .get('/')
-      .expect('hi, swaggerEgg')
+      .get('/homes')
+      .expect('hi, index action' + app.plugins.swaggerEgg.name)
       .expect(200);
   });
 });

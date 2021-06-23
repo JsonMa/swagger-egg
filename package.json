@@ -20,7 +20,12 @@
     "swagger-egg-document"
   ],
   "dependencies": {
-    "swagger-ui-dist": "^3.49.0"
+    "doctrine": "^3.0.0",
+    "globby": "^11.0.3",
+    "is-type-of": "^1.2.1",
+    "swagger-parser": "^10.0.2",
+    "swagger-ui-dist": "^3.49.0",
+    "yaml": "^1.10.2"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -47,7 +52,8 @@
   },
   "files": [
     "config",
-    "app.js"
+    "app.js",
+    "lib"
   ],
   "ci": {
     "version": "8, 10"

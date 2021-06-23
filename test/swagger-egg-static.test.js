@@ -6,7 +6,7 @@ describe('test/swagger-egg.test.js', () => {
   let app;
   before(() => {
     app = mock.app({
-      baseDir: 'apps/swagger-egg-test',
+      baseDir: 'apps/swagger-egg-router-test',
     });
     return app.ready();
   });
@@ -21,10 +21,10 @@ describe('test/swagger-egg.test.js', () => {
       .expect(200);
   });
 
-  it('should GET /swagger/index.js', () => {
+  it('should GET /swagger/swagger.json', () => {
     return app.httpRequest()
-      .get('/swagger/index.js')
-      .expect('Content-Type', 'application/javascript; charset=utf-8')
+      .get('/swagger/swagger.json')
+      .expect('Content-Type', 'application/json; charset=utf-8')
       .expect(200);
   });
 });
