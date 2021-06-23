@@ -7,8 +7,7 @@
  */
 exports.swaggerEgg = {
   schema: {
-    type: 'ajv', // validation tool
-    path: '/app/schema', // shema path
+    path: '/app/schema', // default shema directory path
   },
   swagger: {
     host: '',
@@ -19,15 +18,6 @@ exports.swaggerEgg = {
     ],
     consumes: [ 'application/json' ],
     produces: [ 'application/json' ],
-    tags: [{
-      name: 'admin',
-      description: 'Everything about your admin',
-    }, {
-      name: 'user',
-      description: 'Everything about your user',
-    }, {
-      name: 'home',
-      description: 'Everything about your home',
-    }],
+    tags: [],
   },
 };
