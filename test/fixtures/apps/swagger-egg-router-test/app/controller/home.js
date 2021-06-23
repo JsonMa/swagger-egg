@@ -9,7 +9,7 @@ class HomeController extends Controller {
    *
    * @function index
    * @memberof HomeController
-   * @description #tag home
+   * @description #tags home
    * @description #produces application/json
    * @description #parameters index query schema.definitions.id true - index query parameter
    * @description #responses 200 schema.home - index response
@@ -23,7 +23,7 @@ class HomeController extends Controller {
    *
    * @function new
    * @memberof HomeController
-   * @description #tag home
+   * @description #tags home
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters in body schema.home true - new body parameter
@@ -38,7 +38,7 @@ class HomeController extends Controller {
    *
    * @function show
    * @memberof HomeController
-   * @description #tag home
+   * @description #tags home
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - show path parameter
    * @description #responses 200 schema.home - show response
@@ -52,7 +52,7 @@ class HomeController extends Controller {
    *
    * @function edit
    * @memberof HomeController
-   * @description #tag home
+   * @description #tags home
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - edit path parameter
@@ -68,7 +68,7 @@ class HomeController extends Controller {
    *
    * @function create
    * @memberof HomeController
-   * @description #tag home
+   * @description #tags home
    * @description #consumes application/x-www-form-urlencoded
    * @description #consumes application/json
    * @description #parameters in body schema.home true - create body parameter
@@ -83,7 +83,7 @@ class HomeController extends Controller {
    *
    * @function update
    * @memberof HomeController
-   * @description #tag home
+   * @description #tags home
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - update path parameter
@@ -99,7 +99,7 @@ class HomeController extends Controller {
    *
    * @function destory
    * @memberof HomeController
-   * @description #tag home
+   * @description #tags home
    * @description #consumes application/json
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id false - destory path parameter

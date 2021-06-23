@@ -9,7 +9,7 @@ class UserController extends Controller {
    *
    * @function index
    * @memberof UserController
-   * @description #tag user
+   * @description #tags user
    * @description #produces application/json
    * @description #parameters index query schema.definitions.id true - index query parameter
    * @description #responses 200 schema.user - index response
@@ -23,7 +23,7 @@ class UserController extends Controller {
    *
    * @function new
    * @memberof UserController
-   * @description #tag user
+   * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters in body schema.user true - new body parameter
@@ -38,7 +38,7 @@ class UserController extends Controller {
    *
    * @function show
    * @memberof UserController
-   * @description #tag user
+   * @description #tags user
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - show path parameter
    * @description #responses 200 schema.user - show response
@@ -52,7 +52,7 @@ class UserController extends Controller {
    *
    * @function edit
    * @memberof UserController
-   * @description #tag user
+   * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - edit path parameter
@@ -68,7 +68,7 @@ class UserController extends Controller {
    *
    * @function create
    * @memberof UserController
-   * @description #tag user
+   * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
    * @description #consumes application/json
    * @description #parameters in body schema.user true - create body parameter
@@ -83,7 +83,7 @@ class UserController extends Controller {
    *
    * @function update
    * @memberof UserController
-   * @description #tag user
+   * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - update path parameter
@@ -99,7 +99,7 @@ class UserController extends Controller {
    *
    * @function destory
    * @memberof UserController
-   * @description #tag user
+   * @description #tags user
    * @description #consumes application/json
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id false - destory path parameter

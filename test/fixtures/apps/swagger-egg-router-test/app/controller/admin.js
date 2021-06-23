@@ -9,7 +9,7 @@ class AdminController extends Controller {
    *
    * @function index
    * @memberof AdminController
-   * @description #tag admin
+   * @description #tags admin
    * @description #produces application/json
    * @description #parameters index query schema.definitions.id true - index query parameter
    * @description #responses 200 schema.admin - index response
@@ -23,7 +23,7 @@ class AdminController extends Controller {
    *
    * @function new
    * @memberof AdminController
-   * @description #tag admin
+   * @description #tags admin
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters in body schema.admin true - new body parameter
@@ -38,7 +38,7 @@ class AdminController extends Controller {
    *
    * @function show
    * @memberof AdminController
-   * @description #tag admin
+   * @description #tags admin
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - show path parameter
    * @description #responses 200 schema.admin - show response
@@ -52,7 +52,7 @@ class AdminController extends Controller {
    *
    * @function edit
    * @memberof AdminController
-   * @description #tag admin
+   * @description #tags admin
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - edit path parameter
@@ -68,7 +68,7 @@ class AdminController extends Controller {
    *
    * @function create
    * @memberof AdminController
-   * @description #tag admin
+   * @description #tags admin
    * @description #consumes application/x-www-form-urlencoded
    * @description #consumes application/json
    * @description #parameters in body schema.admin true - create body parameter
@@ -83,7 +83,7 @@ class AdminController extends Controller {
    *
    * @function update
    * @memberof AdminController
-   * @description #tag admin
+   * @description #tags admin
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - update path parameter
@@ -99,7 +99,7 @@ class AdminController extends Controller {
    *
    * @function destory
    * @memberof AdminController
-   * @description #tag admin
+   * @description #tags admin
    * @description #consumes application/json
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id false - destory path parameter
