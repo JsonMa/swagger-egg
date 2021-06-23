@@ -80,7 +80,8 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Grammer
 ### @function {Name}
-The JSDoc `@function` is required, which is used to search router info from `app/router.js`.
+The JSDoc `@function` is **required**, which is used to search router info from `app/router.js`.
+
 ```js
   /**
    * Function example
@@ -91,10 +92,12 @@ The JSDoc `@function` is required, which is used to search router info from `app
     this.ctx.body = 'hi, function example'
   }
 ```
+
 ### @description #tags {Tag1} {Tag2} ...
 `#tags` is used for logical grouping of operations by resources or any other qualifier.
 
 NOTE: Multiple tags should be separated by whitespace.
+
 ```js
   /**
    * Tags example
@@ -107,9 +110,10 @@ NOTE: Multiple tags should be separated by whitespace.
   }
 ```
 ### @description #produces {Mimetype1} {Mimetype2} ...
-`#produces` is used for declaring produces's mimetype.
+`#produces` is used for declaring API response mimetype.
 
 NOTE: Multiple mimetypes should be separated by whitespace.
+
 ```js
   /**
    * Produces example
@@ -124,9 +128,10 @@ NOTE: Multiple mimetypes should be separated by whitespace.
 
 ### @description #consumes {Mimetype1} {Mimetype1} ...
 
-`#consumes` is used for declaring consumes's mimetype.
+`#consumes` is used for declaring API request mimetype.
 
 NOTE: Multiple mimetypes should be separated by whitespace.
+
 ```js
   /**
    * Consumes example
@@ -139,11 +144,13 @@ NOTE: Multiple mimetypes should be separated by whitespace.
   }
 ```
 
-### @description #parameters {PrameterName} {In} {parameterSchema} {Required} - {Description}
+### @description #parameters {PrameterName} {In} {ParameterSchema} {Required} - {Description}
 `#parameters` is used for declaring api request parameters.
 
 NOTE: Description is separated by ` - ` and others are separated by whitespace.
-NOTE: `Required` is boolean type.
+
+NOTE: `In` should be within `query`, `header`, `path`, `formData`, `body` according to Swagger specification. `Required` should be boolean type.
+
 ```js
   /**
    * Response example
