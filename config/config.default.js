@@ -7,7 +7,7 @@
  */
 exports.swaggerEgg = {
   schema: {
-    path: '/app/schema', // default shema directory path
+    path: '/app/schema', // JSON Schema directory
   },
   swagger: {
     host: '',
