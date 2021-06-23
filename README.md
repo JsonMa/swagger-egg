@@ -80,12 +80,16 @@ exports.swaggerEgg = {
 see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Grammer
+
+### #swagger-api
+**`#swagger-api` in front of JSDoc comments is required!**
+
 ### @function {Name}
 The JSDoc `@function` is **required**, which is used to search router info from `app/router.js`.
 
 ```js
   /**
-   * Function example
+   * Function example #swagger-api
    *
    * @function index
    */
@@ -101,7 +105,7 @@ NOTE: Multiple tags should be separated by whitespace.
 
 ```js
   /**
-   * Tags example
+   * Tags example #swagger-api
    *
    * @function index
    * @description #tags user admin
@@ -117,7 +121,7 @@ NOTE: Multiple mimetypes should be separated by whitespace.
 
 ```js
   /**
-   * Produces example
+   * Produces example #swagger-api
    *
    * @function index
    * @description #produces application/json
@@ -135,7 +139,7 @@ NOTE: Multiple mimetypes should be separated by whitespace.
 
 ```js
   /**
-   * Consumes example
+   * Consumes example #swagger-api
    *
    * @function index
    * @description #consumes application/json
@@ -154,7 +158,7 @@ NOTE: `In` should be within `query`, `header`, `path`, `formData`, `body` accord
 
 ```js
   /**
-   * Response example
+   * Response example #swagger-api
    *
    * @function index
    * @description #parameters in body schema.user true - new body parameter
@@ -172,7 +176,7 @@ NOTE: Description is separated by ` - ` and others are separated by whitespace.
 
 ```js
   /**
-   * Parameters example
+   * Parameters example #swagger-api
    *
    * @function index
    * @description #parameters in body schema.user true - new body parameter
@@ -182,7 +186,36 @@ NOTE: Description is separated by ` - ` and others are separated by whitespace.
   }
 ```
 
-## Example
+## Schema Example
+
+You can define `schema directory path` in `swaggerEgg config`.
+
+```js
+// {app_root}/app/schema/users.js
+
+module.exports = {
+  type: 'object',
+  properties: {
+    id: {
+      type: 'string',
+      description: 'user id'
+    },
+    name: {
+      type: 'string',
+      description: 'user name'
+    },
+    age: {
+      type: 'number',
+      description: 'user age'
+    },
+  },
+  required: [ 'id', 'name', 'age' ],
+  $async: true,
+  additionalProperties: false,
+};
+```
+
+## Controller Example
 
 ```js
 // {app_root}/app/controller/users.js
