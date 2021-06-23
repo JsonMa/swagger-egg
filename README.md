@@ -1,5 +1,6 @@
 # swagger-egg
 [中文文档](https://github.com/JsonMa/swagger-egg/blob/master/README.zh_CN.md)
+
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
@@ -9,7 +10,7 @@
 
 [npm-image]: https://img.shields.io/npm/v/swagger-egg.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/swagger-egg
-[travis-image]: https://img.shields.io/travis/jsonma/swagger-egg.svg?style=flat-square
+[travis-image]: https://travis-ci.com/JsonMa/swagger-egg.svg?branch=master
 [travis-url]: https://travis-ci.org/jsonma/swagger-egg
 [codecov-image]: https://img.shields.io/codecov/c/github/jsonma/swagger-egg.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/jsonma/swagger-egg?branch=master
