@@ -31,7 +31,7 @@ module.exports = appInfo => {
     },
     swagger: {
       info: {
-        title: 'Egg Example swagger',
+        title: 'Egg Example Swagger Document',
         description: 'Testing the egg example swagger API',
         version: '1.0.0',
       },
@@ -39,12 +39,13 @@ module.exports = appInfo => {
         url: 'https://swagger.io',
         description: 'Find more info here',
       },
-      host: 'localhost',
+      host: 'localhost:7001',
       schemes: [ 'http', 'https' ],
       consumes: [ 'application/json' ],
       produces: [ 'application/json' ],
       tags: [
         { name: 'home', description: 'Home related end-points' },
+        { name: 'user', description: 'User related end-points' },
       ],
     },
   };
