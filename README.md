@@ -47,7 +47,7 @@ exports.swaggerEgg = {
 
 ## Configuration
 + `swagger.info` is optional and will be generated from your application's `package.json` if not exist.
-+ `swagger.tags` is required if controller's jsdoc comments used `tags`.
++ `swagger.tags` is required if controller's JSDoc comments used `tags`.
 
 ```js
 // {app_root}/config/config.default.js
@@ -82,7 +82,18 @@ see [config/config.default.js](config/config.default.js) for more detail.
 ## Grammer
 
 ### #swagger-api
-**`#swagger-api` in front of JSDoc comments is required!**
+`#swagger-api` in front of JSDoc comments is **required**!
+
+```js
+  /**
+   * #swagger-api
+   *
+   * @function index
+   */
+  async index() {
+    this.ctx.body = 'hi, #swagger-api example'
+  }
+```
 
 ### @function {Name}
 The JSDoc `@function` is **required**, which is used to search router info from `app/router.js`.
