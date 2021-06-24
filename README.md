@@ -221,7 +221,6 @@ module.exports = {
     },
   },
   required: [ 'id', 'name', 'age' ],
-  $async: true,
   additionalProperties: false,
 };
 ```
