@@ -9,7 +9,7 @@
   "dependencies": {
     "egg": "^2.15.1",
     "egg-scripts": "^2.11.0",
-    "swagger-egg": "^1.1.4"
+    "swagger-egg": "^1.1.5"
   },
   "devDependencies": {
     "autod": "^3.0.1",
