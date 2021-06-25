@@ -199,7 +199,9 @@ NOTE: Description is separated by ` - ` and others are separated by whitespace.
 
 ## Schema Example
 
-You can define `schema directory's path` in `swaggerEgg config`.
+Schema should follow the [JSON Schema](http://json-schema.org/) specification. You can use [Ajv](https://ajv.js.org/guide/getting-started.html) to validate it.
+
+Change `swaggerEgg.schema.path` field in config file if you want to redefine it. 
 
 ```js
 // {app_root}/app/schema/users.js
