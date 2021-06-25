@@ -169,13 +169,13 @@ NOTE: `In` should be within `query`, `header`, `path`, `formData`, `body` accord
 
 ```js
   /**
-   * Response example #swagger-api
+   * Parameters example #swagger-api
    *
    * @function index
-   * @description #parameters in body schema.user true - new body parameter
+   * @description #parameters id path schema.id true - id parameter
    */
   async index() {
-    this.ctx.body = 'hi, response example' 
+    this.ctx.body = 'hi, parameters example' 
   }
 ```
 
@@ -187,19 +187,19 @@ NOTE: Description is separated by ` - ` and others are separated by whitespace.
 
 ```js
   /**
-   * Parameters example #swagger-api
+   * Responses example #swagger-api
    *
    * @function index
-   * @description #parameters in body schema.user true - new body parameter
+   * @description #responses schema.user - user responses
    */
   async index() {
-    this.ctx.body = 'hi, parameters example' 
+    this.ctx.body = 'hi, responses example' 
   }
 ```
 
 ## Schema Example
 
-You can define `schema directory path` in `swaggerEgg config`.
+You can define `schema directory's path` in `swaggerEgg config`.
 
 ```js
 // {app_root}/app/schema/users.js
@@ -241,7 +241,7 @@ class UserController extends Controller {
    * @memberof UserController
    * @description #tags user
    * @description #produces application/json
-   * @description #parameters index query schema.definitions.id true - index query parameter
+   * @description #parameters index query schema.definitions.index true - parameter index
    * @description #responses 200 schema.user - index response
    */
   async index() {
@@ -256,7 +256,7 @@ class UserController extends Controller {
    * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
-   * @description #parameters in body schema.user true - new body parameter
+   * @description #parameters userInfo body schema.user true - parameter userInfo
    * @description #responses 200 schema.user - new response
    */
   async new() {
@@ -270,7 +270,7 @@ class UserController extends Controller {
    * @memberof UserController
    * @description #tags user
    * @description #produces application/json
-   * @description #parameters id path schema.definitions.id true - show path parameter
+   * @description #parameters id path schema.definitions.id true - parameter id
    * @description #responses 200 schema.user - show response
    */
   async show() {
@@ -285,8 +285,8 @@ class UserController extends Controller {
    * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
-   * @description #parameters id path schema.definitions.id true - edit path parameter
-   * @description #parameters in body schema.user true - edit body parameter
+   * @description #parameters id path schema.definitions.id true - parameter id
+   * @description #parameters userInfo body schema.user true - parameter userInfo 
    * @description #responses 200 schema.user - edit response
    */
   async edit() {
@@ -300,8 +300,8 @@ class UserController extends Controller {
    * @memberof UserController
    * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
-   * @description #consumes application/json
-   * @description #parameters in body schema.user true - create body parameter
+   * @description #produces application/json
+   * @description #parameters userInfo body schema.user true - parameter userInfo
    * @description #responses 200 schema.user - create response
    */
   async create() {
@@ -316,8 +316,8 @@ class UserController extends Controller {
    * @description #tags user
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
-   * @description #parameters id path schema.definitions.id true - update path parameter
-   * @description #parameters id body schema.user true - update body parameter
+   * @description #parameters id path schema.definitions.id true - parameter id
+   * @description #parameters userInfo body schema.user true - parameter userInfo
    * @description #responses 200 schema.user - update response
    */
   async update() {
@@ -332,7 +332,7 @@ class UserController extends Controller {
    * @description #tags user
    * @description #consumes application/json
    * @description #produces application/json
-   * @description #parameters id path schema.definitions.id false - destory path parameter
+   * @description #parameters id path schema.definitions.id false - parameter id 
    * @description #responses 200 schema.user - destory response
    */
   async destory() {
