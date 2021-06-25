@@ -1,4 +1,5 @@
 # swagger-egg
+[英文文档](https://github.com/JsonMa/swagger-egg/blob/master/README.md)
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -9,7 +10,7 @@
 
 [npm-image]: https://img.shields.io/npm/v/swagger-egg.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/swagger-egg
-[travis-image]: https://img.shields.io/travis/jsonma/swagger-egg.svg?style=flat-square
+[travis-image]: https://travis-ci.com/JsonMa/swagger-egg.svg?branch=master
 [travis-url]: https://travis-ci.org/jsonma/swagger-egg
 [codecov-image]: https://img.shields.io/codecov/c/github/jsonma/swagger-egg.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/jsonma/swagger-egg?branch=master
@@ -23,54 +24,332 @@
 <!--
 Description here.
 -->
+Eggjs [Swagger UI](https://swagger.io/tools/swagger-ui/) API文档自动生成插件，遵循 [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) 规范，`swagger.json` 由插件通过Controller中的 JSDoc 注释自动生成.
 
-## 依赖说明
+**注意**: Node.js版本需要>=10.x，且暂不支持Typescript！
 
-### 依赖的 egg 版本
+## 插件安装
 
-| swagger-egg 版本 | egg 1.x |
-| ---------------- | ------- |
-| 1.x              | 😁      |
-| 0.x              | ❌      |
+```bash
+$ npm i swagger-egg --save
+```
 
-### 依赖的插件
-
-<!--
-
-如果有依赖其它插件，请在这里特别说明。如
-
-- security
-- multipart
-
--->
-
-## 开启插件
+## 插件使用
+Swagger-UI 以 [egg-static](https://github.com/eggjs/egg-static) 静态资源的形式进行访问，若采`static.prefix`为默认值，则只需要打开`http://localhost:7001/public/index.html`即可获取到 Swagger-UI 页面。关于插件在项目中的使用，请参考这个[示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example) ！
 
 ```js
-// config/plugin.js
+// {app_root}/config/plugin.js
 exports.swaggerEgg = {
   enable: true,
   package: "swagger-egg",
 };
 ```
 
-## 使用场景
+## 插件配置
++ `swagger.info` 是可选的，若不存在，则插件将会依据根目录下的`package.json`信息自动生成。
++ `swagger.tags` 是必选的，如果在JSDoc注释中使用了`#tags`标签。
++ 更多Swagger配置请参考[OpenAPI V2](https://swagger.io/specification/v2/)。
 
-- Why and What: 描述为什么会有这个插件，它主要在完成一件什么事情。
-  尽可能描述详细。
-- How: 描述这个插件是怎样使用的，具体的示例代码，甚至提供一个完整的示例，并给出链接。
+```js
+// {app_root}/config/config.default.js
+exports.swaggerEgg = {
+  schema: {
+    path: '/app/schema', // JSON Schema directory
+  },
+  swagger: {
+    info: {
+      title: 'Test swagger',
+      description: 'Testing the Fastify swagger API',
+      version: '0.1.0'
+    },
+    externalDocs: {
+      url: 'https://swagger.io',
+      description: 'Find more info here'
+    },
+    host: 'localhost',
+    schemes: ['http', 'https'],
+    consumes: ['application/json'],
+    produces: ['application/json'],
+    tags: [
+      { name: 'user', description: 'User related end-points' },
+      { name: 'admin', description: 'Admin related end-points' }
+    ],
+  },
+};
+```
 
-## 详细配置
+访问 [config/config.default.js](config/config.default.js) 查看更多默认配置。
 
-请到 [config/config.default.js](config/config.default.js) 查看详细配置项说明。
+## 插件语法
 
-## 单元测试
+### #swagger-api
+JSDoc注释中的`#swagger-api`标签是必须的，插件将以该标签为标识进行注释的自动扫描。
 
-<!-- 描述如何在单元测试中使用此插件，例如 schedule 如何触发。无则省略。-->
+```js
+  /**
+   * #swagger-api
+   *
+   * @function index
+   */
+  async index() {
+    this.ctx.body = 'hi, #swagger-api example'
+  }
+```
 
-## 提问交流
+### @function {Name}
+JSDoc注释的 `@function` 标签也是必须的，插件通过函数名去 `app/router.js`中进行扫描，以获取API的`Http Method、Http Url`信息。
 
-请到 [egg issues](https://github.com/jsonma/egg/issues) 异步交流。
+```js
+  /**
+   * Function example #swagger-api
+   *
+   * @function index
+   */
+  async index() {
+    this.ctx.body = 'hi, function example'
+  }
+```
+
+### @description #tags {Tag1} {Tag2} ...
+JSDoc `@description`内容中的`#tags`标签用于声明该API用到的Swagger tag。
+
+注意: 多个Swagger tags 间应当使用空格进行分隔。
+
+```js
+  /**
+   * Tags example #swagger-api
+   *
+   * @function index
+   * @description #tags user admin
+   */
+  async index() {
+    this.ctx.body = 'hi, tags example' 
+  }
+```
+### @description #produces {Mimetype1} {Mimetype2} ...
+JSDoc `@description`内容中的`#produces` 用于声明API Response MIMEtype.
+
+注意: 多个MIMEtype使用空格进行分隔。
+
+```js
+  /**
+   * Produces example #swagger-api
+   *
+   * @function index
+   * @description #produces application/json
+   */
+  async index() {
+    this.ctx.body = 'hi, produces example' 
+  }
+```
+
+### @description #consumes {Mimetype1} {Mimetype1} ...
+
+JSDoc `@description`内容中的`#consumes`用于声明API Request MIMEtype.
+
+注意: 多个MIMEtype使用空格进行分隔。
+
+```js
+  /**
+   * Consumes example #swagger-api
+   *
+   * @function index
+   * @description #consumes application/json
+   */
+  async index() {
+    this.ctx.body = 'hi, consumes example' 
+  }
+```
+
+### @description #parameters {PrameterName} {In} {ParameterSchema} {Required} - {Description}
+JSDoc `@description`内容中的`#parameters`用于声明API Request Parameters.
+
+注意: description需单独使用` - `分隔开（遵循JSDoc写法）其它参数使用空格进行分隔。
+
+注意: 按照Swagger规范，变量`In`的取值范围只能为`query`, `header`, `path`, `formData`, `body`，变量`Required`的值只能为true或者false。
+
+```js
+  /**
+   * Parameters example #swagger-api
+   *
+   * @function index
+   * @description #parameters id path schema.id true - id parameter
+   */
+  async index() {
+    this.ctx.body = 'hi, parameters example' 
+  }
+```
+
+### #responses {HttpStatus} {ResponseSchema} - {Description}
+
+JSDoc `@description`内容中的`#responses` 用于声明API Response。
+
+注意: description需单独使用` - `分隔开（遵循JSDoc写法）其它参数使用空格进行分隔。
+
+```js
+  /**
+   * Responses example #swagger-api
+   *
+   * @function index
+   * @description #responses schema.user - user responses
+   */
+  async index() {
+    this.ctx.body = 'hi, responses example' 
+  }
+```
+
+## Schema Example
+
+Schema的写法需遵循 [JSON Schema](http://json-schema.org/) 规范，推荐使用[Ajv](https://ajv.js.org/guide/getting-started.html) 进行参数校验。
+
+更改 `swaggerEgg.schema.path` 字段可制定待扫描的Schema文件路径。
+
+```js
+// {app_root}/app/schema/users.js
+
+module.exports = {
+  type: 'object',
+  properties: {
+    id: {
+      type: 'string',
+      description: 'user id'
+    },
+    name: {
+      type: 'string',
+      description: 'user name'
+    },
+    age: {
+      type: 'number',
+      description: 'user age'
+    },
+  },
+  required: [ 'id', 'name', 'age' ],
+  additionalProperties: false,
+};
+```
+
+## Controller 示例
+
+```js
+// {app_root}/app/controller/users.js
+
+const Controller = require('egg').Controller;
+
+class UserController extends Controller {
+
+  /**
+   * Index action #swagger-api
+   *
+   * @function index
+   * @memberof UserController
+   * @description #tags user
+   * @description #produces application/json
+   * @description #parameters index query schema.definitions.index true - parameter index
+   * @description #responses 200 schema.user - index response
+   */
+  async index() {
+    this.ctx.body = 'hi, index action' + this.app.plugins.swaggerEgg.name;
+  }
+
+  /**
+   * New action #swagger-api
+   *
+   * @function new
+   * @memberof UserController
+   * @description #tags user
+   * @description #consumes application/x-www-form-urlencoded
+   * @description #produces application/json
+   * @description #parameters userInfo body schema.user true - parameter userInfo
+   * @description #responses 200 schema.user - new response
+   */
+  async new() {
+    this.ctx.body = 'hi, new action' + this.app.plugins.swaggerEgg.name;
+  }
+
+  /**
+   * Show action #swagger-api
+   *
+   * @function show
+   * @memberof UserController
+   * @description #tags user
+   * @description #produces application/json
+   * @description #parameters id path schema.definitions.id true - parameter id
+   * @description #responses 200 schema.user - show response
+   */
+  async show() {
+    this.ctx.body = 'hi, show action' + this.app.plugins.swaggerEgg.name;
+  }
+
+  /**
+   * Edit action #swagger-api
+   *
+   * @function edit
+   * @memberof UserController
+   * @description #tags user
+   * @description #consumes application/x-www-form-urlencoded
+   * @description #produces application/json
+   * @description #parameters id path schema.definitions.id true - parameter id
+   * @description #parameters userInfo body schema.user true - parameter userInfo 
+   * @description #responses 200 schema.user - edit response
+   */
+  async edit() {
+    this.ctx.body = 'hi, edit action ' + this.app.plugins.swaggerEgg.name;
+  }
+
+  /**
+   * Create action #swagger-api
+   *
+   * @function create
+   * @memberof UserController
+   * @description #tags user
+   * @description #consumes application/x-www-form-urlencoded
+   * @description #produces application/json
+   * @description #parameters userInfo body schema.user true - parameter userInfo
+   * @description #responses 200 schema.user - create response
+   */
+  async create() {
+    this.ctx.body = 'hi, create action ' + this.app.plugins.swaggerEgg.name;
+  }
+
+  /**
+   * Update action #swagger-api
+   *
+   * @function update
+   * @memberof UserController
+   * @description #tags user
+   * @description #consumes application/x-www-form-urlencoded
+   * @description #produces application/json
+   * @description #parameters id path schema.definitions.id true - parameter id
+   * @description #parameters userInfo body schema.user true - parameter userInfo
+   * @description #responses 200 schema.user - update response
+   */
+  async update() {
+    this.ctx.body = 'hi, update action ' + this.app.plugins.swaggerEgg.name;
+  }
+
+  /**
+   * Destory action #swagger-api
+   *
+   * @function destory
+   * @memberof UserController
+   * @description #tags user
+   * @description #consumes application/json
+   * @description #produces application/json
+   * @description #parameters id path schema.definitions.id false - parameter id 
+   * @description #responses 200 schema.user - destory response
+   */
+  async destory() {
+    this.ctx.body = 'hi, destory action ' + this.app.plugins.swaggerEgg.name;
+  }
+}
+
+module.exports = UserController;
+
+```
+
+## 问题及建议
+
+请创建 [issue](https://github.com/JsonMa/swagger-egg/issues) 来反馈您的问题及建议。同时欢迎更多的小伙伴能奉献一款swagger-egg vscode插件，供大家使用。
 
 ## License
 

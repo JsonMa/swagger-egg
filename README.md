@@ -24,7 +24,7 @@
 <!--
 Description here.
 -->
-A egg swagger plugin for serving a [Swagger UI](https://swagger.io/tools/swagger-ui/), using [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) schemas automatically generated from your controller JSDoc comments.
+An egg-swagger plugin for serving a [Swagger UI](https://swagger.io/tools/swagger-ui/), using [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) schemas automatically generated from your controller JSDoc comments.
 
 **CAUTION**: Require Node.js 10.x or higher and typescript is currently not support!
 
