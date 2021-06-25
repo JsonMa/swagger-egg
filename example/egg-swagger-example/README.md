@@ -1,33 +1,17 @@
 # egg-swagger-example
 
-egg swagger example
+This is an egg swagger example.
 
-## QuickStart
+### Usage
 
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
-
-### Development
+Try the flowing steps and you will get the Swagge-UI page!
 
 ```bash
 $ npm i
 $ npm run dev
-$ open http://localhost:7001/
+$ open http://localhost:7001/index.html
 ```
 
-### Deploy
+### Notes
 
-```bash
-$ npm start
-$ npm stop
-```
-
-### npm scripts
-
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
-
-[egg]: https://eggjs.org
+`swagger.json` will be injected to your `app/public` direcotry automaticlly by this plugin.

@@ -35,7 +35,7 @@ $ npm i swagger-egg --save
 ```
 
 ## Usage
-Enable this plugin, visting `index.html` under `public directory` and you will get the Swagger UI page.
+Here is an [Example](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example) ! Enable this plugin, visting `index.html` under `static resource directory` and you will get the Swagger UI page.
 
 ```js
 // {app_root}/config/plugin.js
