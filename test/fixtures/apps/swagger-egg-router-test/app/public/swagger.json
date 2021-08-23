@@ -1,1 +1,1308 @@
-{"swagger":"2.0","info":{"version":"0.0.1","title":"swagger-egg-test","description":"test description API document"},"tags":[{"name":"admin","description":"Everything about your admin"},{"name":"user","description":"Everything about your user"},{"name":"home","description":"Everything about your home"}],"definitions":{"id":{"type":"string"},"index":{"type":"string"}},"paths":{"/admin":{"get":{"parameters":[{"name":"index","required":true,"description":"index query parameter","in":"query","type":"string"}],"responses":{"200":{"description":"index response","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}},"summary":"This is index action summary","tags":["admin"],"produces":["application/json"]},"post":{"parameters":[{"name":"in","required":true,"description":"create body parameter","in":"body","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}],"responses":{"200":{"description":"create response","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}},"summary":"This is create action summary","tags":["admin"],"consumes":["application/json"]}},"/admin/new":{"get":{"parameters":[{"name":"in","required":true,"description":"new body parameter","in":"body","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}],"responses":{"200":{"description":"new response","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}},"summary":"This is new action summary","tags":["admin"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]}},"/admin/:id":{"get":{"parameters":[{"name":"id","required":true,"description":"show path parameter","in":"path","type":"string"}],"responses":{"200":{"description":"show response","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}},"summary":"This is show action summary","tags":["admin"],"produces":["application/json"]},"put":{"parameters":[{"name":"id","required":true,"description":"update path parameter","in":"path","type":"string"},{"name":"id","required":true,"description":"update body parameter","in":"body","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}],"responses":{"200":{"description":"update response","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}},"summary":"This is update action summary","tags":["admin"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]},"delete":{"parameters":[{"name":"id","required":false,"description":"destory path parameter","in":"path","type":"string"}],"responses":{"200":{"description":"destory response","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}},"summary":"This is destory action summary","tags":["admin"],"consumes":["application/json"],"produces":["application/json"]}},"/admin/:id/edit":{"get":{"parameters":[{"name":"id","required":true,"description":"edit path parameter","in":"path","type":"string"},{"name":"in","required":true,"description":"edit body parameter","in":"body","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}],"responses":{"200":{"description":"edit response","schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"$ref":"schema.definition#/int"},"telephone":{"type":"string"}},"required":["name","telephone","id"],"additionalProperties":false}}},"summary":"This is edit action summary","tags":["admin"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]}},"/homes":{"get":{"parameters":[{"name":"index","required":true,"description":"index query parameter","in":"query","type":"string"}],"responses":{"200":{"description":"index response","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}},"summary":"This is index action summary","tags":["home"],"produces":["application/json"]},"post":{"parameters":[{"name":"in","required":true,"description":"create body parameter","in":"body","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}],"responses":{"200":{"description":"create response","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}},"summary":"This is create action summary","tags":["home"],"consumes":["application/json"]}},"/homes/new":{"get":{"parameters":[{"name":"in","required":true,"description":"new body parameter","in":"body","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}],"responses":{"200":{"description":"new response","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}},"summary":"This is new action summary","tags":["home"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]}},"/homes/:id":{"get":{"parameters":[{"name":"id","required":true,"description":"show path parameter","in":"path","type":"string"}],"responses":{"200":{"description":"show response","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}},"summary":"This is show action summary","tags":["home"],"produces":["application/json"]},"put":{"parameters":[{"name":"id","required":true,"description":"update path parameter","in":"path","type":"string"},{"name":"id","required":true,"description":"update body parameter","in":"body","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}],"responses":{"200":{"description":"update response","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}},"summary":"This is update action summary","tags":["home"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]},"delete":{"parameters":[{"name":"id","required":false,"description":"destory path parameter","in":"path","type":"string"}],"responses":{"200":{"description":"destory response","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}},"summary":"This is destory action summary","tags":["home"],"consumes":["application/json"],"produces":["application/json"]}},"/homes/:id/edit":{"get":{"parameters":[{"name":"id","required":true,"description":"edit path parameter","in":"path","type":"string"},{"name":"in","required":true,"description":"edit body parameter","in":"body","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}],"responses":{"200":{"description":"edit response","schema":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"no":{"type":"string"}},"required":["name","address","no"],"additionalProperties":false}}},"summary":"This is edit action summary","tags":["home"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]}},"/api/v1/users":{"get":{"parameters":[{"name":"index","required":true,"description":"index query parameter","in":"query","type":"string"}],"responses":{"200":{"description":"index response","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}},"summary":"This is index action summary","tags":["user"],"produces":["application/json"]},"post":{"parameters":[{"name":"in","required":true,"description":"create body parameter","in":"body","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}],"responses":{"200":{"description":"create response","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}},"summary":"This is create action summary","tags":["user"],"consumes":["application/json"]}},"/api/v1/users/new":{"get":{"parameters":[{"name":"in","required":true,"description":"new body parameter","in":"body","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}],"responses":{"200":{"description":"new response","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}},"summary":"This is new action summary","tags":["user"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]}},"/api/v1/users/:id":{"get":{"parameters":[{"name":"id","required":true,"description":"show path parameter","in":"path","type":"string"}],"responses":{"200":{"description":"show response","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}},"summary":"This is show action summary","tags":["user"],"produces":["application/json"]},"post":{"parameters":[{"name":"id","required":true,"description":"update path parameter","in":"path","type":"string"},{"name":"id","required":true,"description":"update body parameter","in":"body","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}],"responses":{"200":{"description":"update response","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}},"summary":"This is update action summary","tags":["user"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]},"delete":{"parameters":[{"name":"id","required":false,"description":"destory path parameter","in":"path","type":"string"}],"responses":{"200":{"description":"destory response","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}},"summary":"This is destory action summary","tags":["user"],"consumes":["application/json"],"produces":["application/json"]}},"/api/v1/users/:id/edit":{"get":{"parameters":[{"name":"id","required":true,"description":"edit path parameter","in":"path","type":"string"},{"name":"in","required":true,"description":"edit body parameter","in":"body","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}],"responses":{"200":{"description":"edit response","schema":{"type":"object","properties":{"id":{"$ref":"schema.definition#/int"},"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password","id"],"$async":true,"additionalProperties":false}}},"summary":"This is edit action summary","tags":["user"],"consumes":["application/x-www-form-urlencoded"],"produces":["application/json"]}}},"schemes":["https","http"],"basePath":"/","consumes":["application/json"],"produces":["application/json"]}
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.0.1",
+        "title": "swagger-egg-test",
+        "description": "test description API document"
+    },
+    "tags": [
+        {
+            "name": "admin",
+            "description": "Everything about your admin"
+        },
+        {
+            "name": "user",
+            "description": "Everything about your user"
+        },
+        {
+            "name": "home",
+            "description": "Everything about your home"
+        }
+    ],
+    "definitions": {
+        "id": {
+            "type": "string"
+        },
+        "index": {
+            "type": "string"
+        }
+    },
+    "paths": {
+        "/admin": {
+            "get": {
+                "description": "Index action",
+                "parameters": [
+                    {
+                        "name": "index",
+                        "required": true,
+                        "description": "index query parameter",
+                        "in": "query",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "index response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is index action summary",
+                "tags": [
+                    "admin"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "post": {
+                "description": "Create action",
+                "parameters": [
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "create body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "create response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is create action summary",
+                "tags": [
+                    "admin"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/admin/new": {
+            "get": {
+                "description": "New action",
+                "parameters": [
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "new body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "new response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is new action summary",
+                "tags": [
+                    "admin"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/admin/:id": {
+            "get": {
+                "description": "Show action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "show path parameter",
+                        "in": "path",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "show response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is show action summary",
+                "tags": [
+                    "admin"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "put": {
+                "description": "Update action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "update path parameter",
+                        "in": "path",
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "update body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is update action summary",
+                "tags": [
+                    "admin"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "delete": {
+                "description": "Destory action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": false,
+                        "description": "destory path parameter",
+                        "in": "path",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "destory response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is destory action summary",
+                "tags": [
+                    "admin"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/admin/:id/edit": {
+            "get": {
+                "description": "Edit action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "edit path parameter",
+                        "in": "path",
+                        "type": "string"
+                    },
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "edit body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "edit response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "telephone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "telephone",
+                                "id"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is edit action summary",
+                "tags": [
+                    "admin"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/homes": {
+            "get": {
+                "description": "Index action",
+                "parameters": [
+                    {
+                        "name": "index",
+                        "required": true,
+                        "description": "index query parameter",
+                        "in": "query",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "index response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is index action summary",
+                "tags": [
+                    "home"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "post": {
+                "description": "Create action",
+                "parameters": [
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "create body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "create response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is create action summary",
+                "tags": [
+                    "home"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/homes/new": {
+            "get": {
+                "description": "New action",
+                "parameters": [
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "new body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "new response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is new action summary",
+                "tags": [
+                    "home"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/homes/:id": {
+            "get": {
+                "description": "Show action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "show path parameter",
+                        "in": "path",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "show response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is show action summary",
+                "tags": [
+                    "home"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "put": {
+                "description": "Update action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "update path parameter",
+                        "in": "path",
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "update body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is update action summary",
+                "tags": [
+                    "home"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "delete": {
+                "description": "Destory action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": false,
+                        "description": "destory path parameter",
+                        "in": "path",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "destory response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is destory action summary",
+                "tags": [
+                    "home"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/homes/:id/edit": {
+            "get": {
+                "description": "Edit action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "edit path parameter",
+                        "in": "path",
+                        "type": "string"
+                    },
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "edit body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "edit response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "string"
+                                },
+                                "no": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "address",
+                                "no"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is edit action summary",
+                "tags": [
+                    "home"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/api/v1/users": {
+            "get": {
+                "description": "Index action",
+                "parameters": [
+                    {
+                        "name": "index",
+                        "required": true,
+                        "description": "index query parameter",
+                        "in": "query",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "index response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is index action summary",
+                "tags": [
+                    "user"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "post": {
+                "description": "Create action",
+                "parameters": [
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "create body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "create response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is create action summary",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/api/v1/users/new": {
+            "get": {
+                "description": "New action",
+                "parameters": [
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "new body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "new response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is new action summary",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/api/v1/users/:id": {
+            "get": {
+                "description": "Show action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "show path parameter",
+                        "in": "path",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "show response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is show action summary",
+                "tags": [
+                    "user"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "post": {
+                "description": "Update action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "update path parameter",
+                        "in": "path",
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "update body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is update action summary",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            },
+            "delete": {
+                "description": "Destory action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": false,
+                        "description": "destory path parameter",
+                        "in": "path",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "destory response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is destory action summary",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        },
+        "/api/v1/users/:id/edit": {
+            "get": {
+                "description": "Edit action",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "description": "edit path parameter",
+                        "in": "path",
+                        "type": "string"
+                    },
+                    {
+                        "name": "in",
+                        "required": true,
+                        "description": "edit body parameter",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "edit response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "$ref": "schema.definition#/int"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "password",
+                                "id"
+                            ],
+                            "$async": true,
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "summary": "This is edit action summary",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        }
+    },
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "basePath": "/",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ]
+}
