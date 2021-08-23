@@ -74,8 +74,7 @@ exports.swaggerEgg = {
     consumes: ['application/json'],
     produces: ['application/json'],
     tags: [
-      { name: 'user', description: 'User related end-points' },
-      { name: 'admin', description: 'Admin related end-points' }
+      { name: 'user', description: 'User related end-points' }
     ],
     securityDefinitions: {
       api_key: {
