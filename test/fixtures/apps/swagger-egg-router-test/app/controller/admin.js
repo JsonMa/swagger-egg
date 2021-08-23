@@ -7,6 +7,7 @@ class AdminController extends Controller {
   /**
    * Index action #swagger-api
    *
+   * @summary This is index action summary
    * @function index
    * @memberof AdminController
    * @description #tags admin
@@ -21,6 +22,7 @@ class AdminController extends Controller {
   /**
    * New action #swagger-api
    *
+   * @summary This is new action summary
    * @function new
    * @memberof AdminController
    * @description #tags admin
@@ -36,6 +38,7 @@ class AdminController extends Controller {
   /**
    * Show action #swagger-api
    *
+   * @summary This is show action summary
    * @function show
    * @memberof AdminController
    * @description #tags admin
@@ -50,6 +53,7 @@ class AdminController extends Controller {
   /**
    * Edit action #swagger-api
    *
+   * @summary This is edit action summary
    * @function edit
    * @memberof AdminController
    * @description #tags admin
@@ -66,6 +70,7 @@ class AdminController extends Controller {
   /**
    * Create action #swagger-api
    *
+   * @summary This is create action summary
    * @function create
    * @memberof AdminController
    * @description #tags admin
@@ -81,6 +86,7 @@ class AdminController extends Controller {
   /**
    * Update action #swagger-api
    *
+   * @summary This is update action summary
    * @function update
    * @memberof AdminController
    * @description #tags admin
@@ -97,6 +103,7 @@ class AdminController extends Controller {
   /**
    * Destory action #swagger-api
    *
+   * @summary This is destory action summary
    * @function destory
    * @memberof AdminController
    * @description #tags admin

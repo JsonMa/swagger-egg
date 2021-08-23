@@ -7,6 +7,7 @@ class UserController extends Controller {
   /**
    * Index action #swagger-api
    *
+   * @summary This is index action summary
    * @function index
    * @memberof UserController
    * @description #tags user
@@ -21,6 +22,7 @@ class UserController extends Controller {
   /**
    * New action #swagger-api
    *
+   * @summary This is new action summary
    * @function new
    * @memberof UserController
    * @description #tags user
@@ -36,6 +38,7 @@ class UserController extends Controller {
   /**
    * Show action #swagger-api
    *
+   * @summary This is show action summary
    * @function show
    * @memberof UserController
    * @description #tags user
@@ -50,6 +53,7 @@ class UserController extends Controller {
   /**
    * Edit action #swagger-api
    *
+   * @summary This is edit action summary
    * @function edit
    * @memberof UserController
    * @description #tags user
@@ -66,6 +70,7 @@ class UserController extends Controller {
   /**
    * Create action #swagger-api
    *
+   * @summary This is create action summary
    * @function create
    * @memberof UserController
    * @description #tags user
@@ -81,6 +86,7 @@ class UserController extends Controller {
   /**
    * Update action #swagger-api
    *
+   * @summary This is update action summary
    * @function update
    * @memberof UserController
    * @description #tags user
@@ -97,6 +103,7 @@ class UserController extends Controller {
   /**
    * Destory action #swagger-api
    *
+   * @summary This is destory action summary
    * @function destory
    * @memberof UserController
    * @description #tags user

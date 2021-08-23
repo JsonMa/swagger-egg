@@ -133,6 +133,21 @@ The JSDoc `@function` is **required**, which is used to search router info from 
   }
 ```
 
+### @summary {functionSummary}
+The JSDoc `@summary` is used to describe the function's summary.
+
+```js
+  /**
+   * Function example #swagger-api
+   *
+   * @function index
+   * @summary This is function's summary.
+   */
+  async index() {
+    this.ctx.body = 'hi, function example'
+  }
+```
+
 ### @description #tags {Tag1} {Tag2} ...
 `#tags` is used for logical grouping of operations by resources or any other qualifier.
 

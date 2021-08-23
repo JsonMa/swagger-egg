@@ -38,7 +38,7 @@ $ npm i swagger-egg --save
 ```
 
 ## 插件使用
-Swagger-UI 以 [egg-static](https://github.com/eggjs/egg-static) 静态资源的形式进行访问，若采`static.prefix`为默认值，则只需要打开`http://localhost:7001/public/index.html`即可获取到 Swagger-UI 页面。关于插件在项目中的使用，请参考这个[示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example) ！
+Swagger-UI 以 [egg-static](https://github.com/eggjs/egg-static) 静态资源的形式进行访问，若`static.prefix`为默认值，则只需要打开`http://localhost:7001/public/index.html`即可获取到 Swagger-UI 页面。关于插件在项目中的使用，请参考这个[示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example) ！
 
 ```js
 // {app_root}/config/plugin.js
@@ -133,7 +133,20 @@ JSDoc注释的 `@function` 标签也是必须的，插件通过函数名去 `app
     this.ctx.body = 'hi, function example'
   }
 ```
+### @summary {functionSummary}
+JSDoc `@summary` 用于声明函数的简介.
 
+```js
+  /**
+   * Function example #swagger-api
+   *
+   * @function index
+   * @summary This is function's summary.
+   */
+  async index() {
+    this.ctx.body = 'hi, function example'
+  }
+```
 ### @description #tags {Tag1} {Tag2} ...
 JSDoc `@description`内容中的`#tags`标签用于声明该API用到的Swagger tag。
 

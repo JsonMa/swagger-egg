@@ -7,6 +7,7 @@ class HomeController extends Controller {
   /**
    * Index action #swagger-api
    *
+   * @summary This is index action summary
    * @function index
    * @memberof HomeController
    * @description #tags home
@@ -21,6 +22,7 @@ class HomeController extends Controller {
   /**
    * New action #swagger-api
    *
+   * @summary This is new action summary
    * @function new
    * @memberof HomeController
    * @description #tags home
@@ -36,6 +38,7 @@ class HomeController extends Controller {
   /**
    * Show action #swagger-api
    *
+   * @summary This is show action summary
    * @function show
    * @memberof HomeController
    * @description #tags home
@@ -50,6 +53,7 @@ class HomeController extends Controller {
   /**
    * Edit action #swagger-api
    *
+   * @summary This is edit action summary
    * @function edit
    * @memberof HomeController
    * @description #tags home
@@ -66,6 +70,7 @@ class HomeController extends Controller {
   /**
    * Create action #swagger-api
    *
+   * @summary This is create action summary
    * @function create
    * @memberof HomeController
    * @description #tags home
@@ -81,6 +86,7 @@ class HomeController extends Controller {
   /**
    * Update action #swagger-api
    *
+   * @summary This is update action summary
    * @function update
    * @memberof HomeController
    * @description #tags home
@@ -97,6 +103,7 @@ class HomeController extends Controller {
   /**
    * Destory action #swagger-api
    *
+   * @summary This is destory action summary
    * @function destory
    * @memberof HomeController
    * @description #tags home
