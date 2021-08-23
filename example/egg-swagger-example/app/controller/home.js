@@ -15,7 +15,13 @@ class HomeController extends Controller {
    * @description #responses 200 schema.home - index response
    */
   async index() {
-    this.ctx.body = 'hi, index action' + this.app.plugins.swaggerEgg.name;
+    let message = this.app.plugins.swaggerEgg.name;
+    if (this.ctx.queries.index) message = this.ctx.request.queries.index;
+    this.ctx.body = {
+      name: message,
+      address: 'this is address',
+      no: 'this is no',
+    };
   }
 
   /**

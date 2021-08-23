@@ -69,7 +69,7 @@ exports.swaggerEgg = {
       url: 'https://swagger.io',
       description: 'Find more info here'
     },
-    host: 'localhost',
+    host: '127.0.0.1:7001', // 应当与egg server host保持一致，否则会有跨域的问题
     schemes: ['http', 'https'],
     consumes: ['application/json'],
     produces: ['application/json'],
@@ -77,6 +77,27 @@ exports.swaggerEgg = {
       { name: 'user', description: 'User related end-points' },
       { name: 'admin', description: 'Admin related end-points' }
     ],
+    securityDefinitions: {
+      api_key: {
+        type: 'apiKey', // basic/apiKey/oauth2
+        name: 'Authorization', // 自定义的鉴权参数，通常为'Authorization'
+        in: 'header', // 鉴权参数放置的位置，query 或者 header
+      },
+      swagger_auth: {
+        type: 'oauth2',
+        authorizationUrl: 'http://swagger.io/api/oauth/dialog',
+        flow: 'implicit',
+        scopes: {
+          'write:homes': 'modify home info',
+          'read:homes': 'read home info',
+        },
+      },
+    },
+    security: [
+      {
+        api_key: [], // 鉴权方式（securityDefinitions中定义的内容）
+      },
+    ], // 注意: security为数组类型
   },
 };
 ```

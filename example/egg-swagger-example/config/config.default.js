@@ -39,7 +39,7 @@ module.exports = appInfo => {
         url: 'https://swagger.io',
         description: 'Find more info here',
       },
-      host: 'localhost:7001',
+      host: '127.0.0.1:7001', // catution: 'localhost:7001' will result in cross origin error
       schemes: [ 'http', 'https' ],
       consumes: [ 'application/json' ],
       produces: [ 'application/json' ],
@@ -47,6 +47,27 @@ module.exports = appInfo => {
         { name: 'home', description: 'Home related end-points' },
         { name: 'user', description: 'User related end-points' },
       ],
+      securityDefinitions: {
+        api_key: {
+          type: 'apiKey', // basic/apiKey/oauth2
+          name: 'Authorization', // selfdefined parameter, usually use 'Authorization'
+          in: 'header', // query or header, usually use 'header'
+        },
+        github_auth: {
+          type: 'oauth2',
+          authorizationUrl: 'http://swagger.io/api/oauth/dialog',
+          flow: 'implicit',
+          scopes: {
+            'write:homes': 'modify home info',
+            'read:homes': 'read home info',
+          },
+        },
+      },
+      security: [
+        {
+          api_key: [], // use api key to security
+        },
+      ], // Cacution: security is array type
     },
   };
 
