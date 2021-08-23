@@ -10,7 +10,7 @@ module.exports = {
       type: 'string',
     },
     no: {
-      type: 'string',
+      $ref: '#/definitions/no',
     },
   },
   required: [ 'name', 'address', 'no' ],
