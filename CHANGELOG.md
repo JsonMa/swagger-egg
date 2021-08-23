@@ -1,3 +1,23 @@
+# [1.2.0](https://github.com/JsonMa/swagger-egg/compare/v1.1.0...v1.2.0) (2021-08-23)
+
+### Bug Fixes
+
+* **swaggerUI:** :bug: fix swagger prefix bug ([9e5490b](https://github.com/JsonMa/swagger-egg/commit/9e5490b931ca8db7d922aa7a6967ea7ac02e3707))
+* **swaggerUI:** :bug: resolve egg static prefix bug ([72c229c](https://github.com/JsonMa/swagger-egg/commit/72c229c5536c8b07bf8f52e895b1ad2ca7536ba2))
+* **swaggerUI:** :bug: resolve index.html error ([8a12980](https://github.com/JsonMa/swagger-egg/commit/8a1298083ccbf764938f6a25badcec968473da50))
+* **swaggerUI:** :bug: resolve swagger index.html docExpansion bug ([d931ba2](https://github.com/JsonMa/swagger-egg/commit/d931ba2d8c0de6e4ee2b16d2dad268ea5e70a76f))
+* **swaggerUI:** :bug: resolve swagger index.html error ([fe337c0](https://github.com/JsonMa/swagger-egg/commit/fe337c00f7dd18e05bb3a0beb5503ab21b6947d9))
+
+
+### Features
+
+* :memo: add securityDefinitions doc ([7a46de1](https://github.com/JsonMa/swagger-egg/commit/7a46de1945c9067f039947fd7da80b55649256d5))
+* :memo: socialify to project ([f5f2e74](https://github.com/JsonMa/swagger-egg/commit/f5f2e74b4eb5762f68602c3083e8be1a41aa1d79))
+* :sparkles: support JSDoc summary to swagger-egg ([27e1b6d](https://github.com/JsonMa/swagger-egg/commit/27e1b6df02c9149adaf32ba7f5219793c96fd17b))
+* :sparkles: support path description ([08edea0](https://github.com/JsonMa/swagger-egg/commit/08edea0403cbedf68243b1b471ac75f4140487be))
+
+
+
 ## 1.1.5 (2021-06-25)
 
 
