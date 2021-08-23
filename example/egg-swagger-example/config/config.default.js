@@ -18,10 +18,6 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
-  config.static = {
-    prefix: '/asdf',
-  };
-
   // add your user config here
   // myAppName: 'egg',
   // {app_root}/config/config.default.js
@@ -45,7 +41,6 @@ module.exports = appInfo => {
       produces: [ 'application/json' ],
       tags: [
         { name: 'home', description: 'Home related end-points' },
-        { name: 'user', description: 'User related end-points' },
       ],
       securityDefinitions: {
         api_key: {
