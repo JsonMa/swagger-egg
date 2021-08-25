@@ -143,7 +143,7 @@ JSDoc `@summary` 用于声明函数的简介.
    * @summary This is function's summary.
    */
   async index() {
-    this.ctx.body = 'hi, function example'
+    this.ctx.body = 'hi, summary example'
   }
 ```
 ### @description #tags {Tag1} {Tag2} ...

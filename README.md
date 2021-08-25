@@ -143,7 +143,7 @@ The JSDoc `@summary` is used to describe the function's summary.
    * @summary This is function's summary.
    */
   async index() {
-    this.ctx.body = 'hi, function example'
+    this.ctx.body = 'hi, summary example'
   }
 ```
 
