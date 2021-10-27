@@ -27,7 +27,7 @@
 <!--
 Description here.
 -->
-Eggjs [Swagger UI](https://swagger.io/tools/swagger-ui/) API文档自动生成插件，遵循 [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) 规范，`swagger.json` 由插件通过Controller中的 JSDoc 注释自动生成.
+Eggjs [Swagger UI](https://swagger.io/tools/swagger-ui/) API文档自动生成插件，请求及响应参数需通过[JSON Schema](http://json-schema.org/specification.html)（推荐使用[Ajv](https://github.com/ajv-validator/ajv)）定义，并遵循 [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) 规范，`swagger.json` 由插件通过Controller中的 JSDoc 注释自动生成。
 
 **注意**: Node.js版本需要>=10.x，且暂不支持Typescript！
 
