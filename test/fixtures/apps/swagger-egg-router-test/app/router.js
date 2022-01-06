@@ -1,7 +1,9 @@
 'use strict';
 
-module.exports = app => {
+module.exports = (app) => {
   const { router, controller } = app;
+
+  router.prefix('/api/v1');
 
   // Require style router
   require('./router/admin')(app);

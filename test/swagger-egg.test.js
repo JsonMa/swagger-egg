@@ -15,8 +15,9 @@ describe('test/swagger-egg.test.js', () => {
   afterEach(mock.restore);
 
   it('should GET /homes', () => {
-    return app.httpRequest()
-      .get('/homes')
+    return app
+      .httpRequest()
+      .get('/api/v1/homes')
       .expect('hi, index action' + app.plugins.swaggerEgg.name)
       .expect(200);
   });
