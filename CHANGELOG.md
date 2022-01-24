@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/JsonMa/swagger-egg/compare/v1.3.0...v1.3.1) (2022-01-24)
+
+
+### Bug Fixes
+
+* fix windows crlf bug ([dbb0857](https://github.com/JsonMa/swagger-egg/commit/dbb0857ea9012dc2c695ac0f477ddc0a5e6a7ad8))
+
+
+
 ## [1.2.2](https://github.com/JsonMa/swagger-egg/compare/v1.2.1...v1.2.2) (2021-10-26)
 
 
