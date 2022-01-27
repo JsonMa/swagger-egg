@@ -1,5 +1,8 @@
 {
-  "extends": "eslint-config-egg",
+  "extends": [
+    "eslint-config-egg",
+    "prettier"
+  ],
   "rules": {
     "arrow-parens":"off"
   }
