@@ -197,12 +197,15 @@ JSDoc `@description`内容中的`#consumes`用于声明API Request MIMEtype.
   }
 ```
 
-### @description #parameters {PrameterName} {In} {ParameterSchema} {Required} - {Description}
+### @description #parameters {PrameterName} {In} {ParameterSchema|Type} {Required} - {Description}
 JSDoc `@description`内容中的`#parameters`用于声明API Request Parameters.
 
 注意: description需单独使用` - `分隔开（遵循JSDoc写法）其它参数使用空格进行分隔。
 
-注意: 按照Swagger规范，变量`In`的取值范围只能为`query`, `header`, `path`, `formData`, `body`，变量`Required`的值只能为true或者false。
+注意: 
+- 按照Swagger规范，变量`In`的取值范围只能为`'query', 'header', 'path', 'formData', 'body'`
+- 变量`Required`的值只能为`true`或者`false`。
+- 变量`Type`的取值范围只能为`['string', 'number', 'integer', 'boolean', 'array', 'file']`。
 
 ```js
   /**

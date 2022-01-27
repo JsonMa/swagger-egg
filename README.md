@@ -198,13 +198,15 @@ NOTE: Multiple mimetypes should be separated by whitespace.
   }
 ```
 
-### @description #parameters {PrameterName} {In} {ParameterSchema} {Required} - {Description}
+### @description #parameters {PrameterName} {In} {ParameterSchema|Type} {Required} - {Description}
 `#parameters` is used for declaring api request parameters.
 
 NOTE: Description is separated by ` - ` and others are separated by whitespace.
 
-NOTE: `In` should be within `query`, `header`, `path`, `formData`, `body` according to Swagger specification. `Required` should be boolean type.
-
+NOTE: 
+- `In` should be within `'query', 'header', 'path', 'formData', 'body'` according to Swagger specification.
+- `Required` should be `boolean type`.
+- `Type` should be within `'string', 'number', 'integer', 'boolean', 'array', 'file'`.
 ```js
   /**
    * Parameters example #swagger-api
