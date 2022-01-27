@@ -3,7 +3,6 @@
 const Controller = require('egg').Controller;
 
 class AdminController extends Controller {
-
   /**
    * Index action #swagger-api
    *
@@ -12,7 +11,7 @@ class AdminController extends Controller {
    * @memberof AdminController
    * @description #tags admin
    * @description #produces application/json
-   * @description #parameters index query schema.definitions.id true - index query parameter
+   * @description #parameters index query number true - index query parameter
    * @description #responses 200 schema.admin - index response
    */
   async index() {
