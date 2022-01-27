@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/JsonMa/swagger-egg/compare/v1.3.1...v1.4.0) (2022-01-27)
+
+
+### Features
+
+* :sparkles: add support to simple parameters type ([d75a482](https://github.com/JsonMa/swagger-egg/commit/d75a4823140491c6145ec854bc5591ff9d4b2da3))
+
+
+
 ## [1.3.1](https://github.com/JsonMa/swagger-egg/compare/v1.3.0...v1.3.1) (2022-01-24)
 
 
