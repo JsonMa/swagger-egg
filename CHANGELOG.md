@@ -1,3 +1,12 @@
+## [1.4.1](https://github.com/JsonMa/swagger-egg/compare/v1.4.0...v1.4.1) (2022-02-25)
+
+
+### Bug Fixes
+
+* :bug: fix file name bug [#12](https://github.com/JsonMa/swagger-egg/issues/12) ([3d102f7](https://github.com/JsonMa/swagger-egg/commit/3d102f7df7e998543e41035c0a20a86cd4b25bd7))
+
+
+
 # [1.4.0](https://github.com/JsonMa/swagger-egg/compare/v1.3.1...v1.4.0) (2022-01-27)
 
 

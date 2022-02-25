@@ -1,6 +1,6 @@
 {
   "name": "swagger-egg",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "swagger document generator for egg.",
   "eggPlugin": {
     "name": "swaggerEgg"
