@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (app) => {
-  const { router, controller } = app;
+  const {router, controller} = app;
 
   router.prefix('/api/v1');
 
@@ -13,11 +13,11 @@ module.exports = (app) => {
   router.resources('users', '/api/v1/users', controller.v1.users);
 
   // Common style router
-  router.get('/homes', controller.home.index);
-  router.get('/homes/new', controller.home.new);
-  router.get('/homes/:id', controller.home.show);
-  router.get('/homes/:id/edit', controller.home.edit);
-  router.post('/homes', controller.home.create);
-  router.put('/homes/:id', controller.home.update);
-  router.delete('/homes/:id', controller.home.destory);
+  router.get('/homes', controller.homeTest.index);
+  router.get('/homes/new', controller.homeTest.new);
+  router.get('/homes/:id', controller.homeTest.show);
+  router.get('/homes/:id/edit', controller.homeTest.edit);
+  router.post('/homes', controller.homeTest.create);
+  router.put('/homes/:id', controller.homeTest.update);
+  router.delete('/homes/:id', controller.homeTest.destory);
 };

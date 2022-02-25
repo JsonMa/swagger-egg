@@ -260,7 +260,7 @@
     "/api/v1/homes": {
       "get": {
         "description": "Index action",
-        "operationId": "home/index",
+        "operationId": "homeTest/index",
         "parameters": [
           {"name": "index", "required": true, "description": "index query parameter", "in": "query", "type": "string"}
         ],
@@ -281,7 +281,7 @@
       },
       "post": {
         "description": "Create action",
-        "operationId": "home/create",
+        "operationId": "homeTest/create",
         "parameters": [
           {
             "name": "in",
@@ -315,7 +315,7 @@
     "/api/v1/homes/new": {
       "get": {
         "description": "New action",
-        "operationId": "home/new",
+        "operationId": "homeTest/new",
         "parameters": [
           {
             "name": "in",
@@ -350,7 +350,7 @@
     "/api/v1/homes/:id": {
       "get": {
         "description": "Show action",
-        "operationId": "home/show",
+        "operationId": "homeTest/show",
         "parameters": [
           {"name": "id", "required": true, "description": "show path parameter", "in": "path", "type": "string"}
         ],
@@ -371,7 +371,7 @@
       },
       "put": {
         "description": "Update action",
-        "operationId": "home/update",
+        "operationId": "homeTest/update",
         "parameters": [
           {"name": "id", "required": true, "description": "update path parameter", "in": "path", "type": "string"},
           {
@@ -405,7 +405,7 @@
       },
       "delete": {
         "description": "Destory action",
-        "operationId": "home/destory",
+        "operationId": "homeTest/destory",
         "parameters": [
           {"name": "id", "required": true, "description": "destory path parameter", "in": "path", "type": "string"}
         ],
@@ -429,7 +429,7 @@
     "/api/v1/homes/:id/edit": {
       "get": {
         "description": "Edit action",
-        "operationId": "home/edit",
+        "operationId": "homeTest/edit",
         "parameters": [
           {"name": "id", "required": true, "description": "edit path parameter", "in": "path", "type": "string"},
           {
