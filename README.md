@@ -97,6 +97,7 @@ exports.swaggerEgg = {
       },
     ], // Cacution: security is array type
   },
+  ts: true // use ts
 };
 ```
 
@@ -160,7 +161,7 @@ NOTE: Multiple tags should be separated by whitespace.
    * @description #tags user admin
    */
   async index() {
-    this.ctx.body = 'hi, tags example' 
+    this.ctx.body = 'hi, tags example'
   }
 ```
 ### @description #produces {Mimetype1} {Mimetype2} ...
@@ -176,7 +177,7 @@ NOTE: Multiple mimetypes should be separated by whitespace.
    * @description #produces application/json
    */
   async index() {
-    this.ctx.body = 'hi, produces example' 
+    this.ctx.body = 'hi, produces example'
   }
 ```
 
@@ -194,7 +195,7 @@ NOTE: Multiple mimetypes should be separated by whitespace.
    * @description #consumes application/json
    */
   async index() {
-    this.ctx.body = 'hi, consumes example' 
+    this.ctx.body = 'hi, consumes example'
   }
 ```
 
@@ -203,7 +204,7 @@ NOTE: Multiple mimetypes should be separated by whitespace.
 
 NOTE: Description is separated by ` - ` and others are separated by whitespace.
 
-NOTE: 
+NOTE:
 - `In` should be within `'query', 'header', 'path', 'formData', 'body'` according to Swagger specification.
 - `Required` should be `boolean type`.
 - `Type` should be within `'string', 'number', 'integer', 'boolean', 'array', 'file'`.
@@ -215,7 +216,7 @@ NOTE:
    * @description #parameters id path schema.id true - id parameter
    */
   async index() {
-    this.ctx.body = 'hi, parameters example' 
+    this.ctx.body = 'hi, parameters example'
   }
 ```
 
@@ -233,7 +234,7 @@ NOTE: Description is separated by ` - ` and others are separated by whitespace.
    * @description #responses schema.user - user responses
    */
   async index() {
-    this.ctx.body = 'hi, responses example' 
+    this.ctx.body = 'hi, responses example'
   }
 ```
 
@@ -241,7 +242,7 @@ NOTE: Description is separated by ` - ` and others are separated by whitespace.
 
 Schema should follow the [JSON Schema](http://json-schema.org/) specification. You can use [Ajv](https://ajv.js.org/guide/getting-started.html) to validate it.
 
-Change `swaggerEgg.schema.path` field in config file if you want to redefine it. 
+Change `swaggerEgg.schema.path` field in config file if you want to redefine it.
 
 ```js
 // {app_root}/app/schema/users.js
@@ -328,7 +329,7 @@ class UserController extends Controller {
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - parameter id
-   * @description #parameters userInfo body schema.user true - parameter userInfo 
+   * @description #parameters userInfo body schema.user true - parameter userInfo
    * @description #responses 200 schema.user - edit response
    */
   async edit() {
@@ -374,7 +375,7 @@ class UserController extends Controller {
    * @description #tags user
    * @description #consumes application/json
    * @description #produces application/json
-   * @description #parameters id path schema.definitions.id false - parameter id 
+   * @description #parameters id path schema.definitions.id false - parameter id
    * @description #responses 200 schema.user - destory response
    */
   async destory() {
