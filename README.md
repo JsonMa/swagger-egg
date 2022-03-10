@@ -96,8 +96,7 @@ exports.swaggerEgg = {
         api_key: [], // select 'api_key' to security(defined in `securityDefinitions`)
       },
     ], // Cacution: security is array type
-  },
-  ts: true // use ts
+  }
 };
 ```
 
