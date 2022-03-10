@@ -1,3 +1,20 @@
+## [1.5.2](https://github.com/JsonMa/swagger-egg/compare/v1.4.1...v1.5.2) (2022-03-10)
+
+
+### Bug Fixes
+
+* :bug: fix detect project language bug ([6ddf603](https://github.com/JsonMa/swagger-egg/commit/6ddf6038668c965fafe873f0124a9ee03dbbdf31))
+* :bug: fix ts extend bug ([0d06265](https://github.com/JsonMa/swagger-egg/commit/0d06265dbbac305f08906b1b4daa443cb34900b0))
+* fixed eslint ([3f56821](https://github.com/JsonMa/swagger-egg/commit/3f568218beacb79cc5e21c590f2ea8e2cea2ec95))
+
+
+### Features
+
+* :sparkles: add ts support ([e8ec535](https://github.com/JsonMa/swagger-egg/commit/e8ec535472de28b16c6f7ca7bba0cf2f723a557d))
+* support ts ([1cf0998](https://github.com/JsonMa/swagger-egg/commit/1cf099816f8563a7c06ff9e99be4276ef600de74))
+
+
+
 ## [1.5.1](https://github.com/JsonMa/swagger-egg/compare/v1.4.1...v1.5.1) (2022-03-10)
 
 
