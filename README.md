@@ -27,9 +27,9 @@
 <!--
 Description here.
 -->
-An egg-swagger plugin for serving a [Swagger UI](https://swagger.io/tools/swagger-ui/), params should follow [JSON Schema](http://json-schema.org/specification.html) specification (recommend use [Ajv](https://github.com/ajv-validator/ajv))，using [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) schemas automatically generated from your controller JSDoc comments.
+An egg-swagger plugin (support Typescript) for serving a [Swagger UI](https://swagger.io/tools/swagger-ui/), params should follow [JSON Schema](http://json-schema.org/specification.html) specification (recommend use [Ajv](https://github.com/ajv-validator/ajv))，using [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) schemas automatically generated from your controller JSDoc comments.
 
-**CAUTION**: Require Node.js 10.x or higher and typescript is currently not support!
+**CAUTION**: Require Node.js 10.x or higher!
 
 ## Install
 
