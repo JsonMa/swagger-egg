@@ -20,4 +20,5 @@ exports.swaggerEgg = {
     produces: [ 'application/json' ],
     tags: [],
   },
+  ts: false
 };
