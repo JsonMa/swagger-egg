@@ -1,11 +1,10 @@
 import { EggPlugin } from 'egg';
 
 const plugin: EggPlugin = {
-  // static: true,
-  // nunjucks: {
-  //   enable: true,
-  //   package: 'egg-view-nunjucks',
-  // },
+  swaggerEgg: {
+    enable: true,
+    package: "swagger-egg",
+  }
 };
 
 export default plugin;
