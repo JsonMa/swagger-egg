@@ -13,6 +13,6 @@ module.exports = {
       type: 'string',
     },
   },
-  required: [ 'name', 'telephone', 'id' ],
+  required: ['name', 'telephone', 'id'],
   additionalProperties: false,
 };

@@ -12,13 +12,9 @@ exports.swaggerEgg = {
   swagger: {
     host: '',
     basePath: '/',
-    schemes: [
-      'https',
-      'http',
-    ],
-    consumes: [ 'application/json' ],
-    produces: [ 'application/json' ],
+    schemes: ['https', 'http'],
+    consumes: ['application/json'],
+    produces: ['application/json'],
     tags: [],
   },
-  ts: false
 };
