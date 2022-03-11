@@ -12,7 +12,7 @@ class UserController extends Controller {
    * @memberof UserController
    * @description #tags user
    * @description #produces application/json
-   * @description #parameters index query schema.definitions.id true - index query parameter
+   * @description #parameters index query schema.definitions.id true - index query parameter eg:exampleindex
    * @description #responses 200 schema.user - index response
    */
   async index() {
