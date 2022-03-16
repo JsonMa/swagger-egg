@@ -17,4 +17,5 @@ exports.swaggerEgg = {
     produces: ['application/json'],
     tags: [],
   },
+  typescriptJsonSchema: false
 };
