@@ -42,7 +42,7 @@ Enable this plugin, visting `index.html` under `static resource directory` and y
 Project Example: 
 - [JS Example](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example)
 - [TS Example](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-example)
-- [TS Schema Example ](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-schema-example)
+- [TS-Json-Schema Example ](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-schema-example)
 ```js
 // {app_root}/config/plugin.js
 exports.swaggerEgg = {
