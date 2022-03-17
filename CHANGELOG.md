@@ -1,3 +1,22 @@
+# [1.6.0](https://github.com/JsonMa/swagger-egg/compare/v1.5.2...v1.6.0) (2022-03-17)
+
+
+### Bug Fixes
+
+* :bug: fix controller not found bug in router file ([d6a4590](https://github.com/JsonMa/swagger-egg/commit/d6a45905a55b924e6336338660e8d333dbc31a57))
+* eslint auto fix ([16f2a92](https://github.com/JsonMa/swagger-egg/commit/16f2a92ee00d3e24edd46edfb74a85b632f9a4cd))
+
+
+### Features
+
+* 支持 typescript 定义 schema ([608298e](https://github.com/JsonMa/swagger-egg/commit/608298e46f4a3b41a2ee8615331ad8f7497e7a51))
+* Add default value in [@description](https://github.com/description) #parameters ([4846bec](https://github.com/JsonMa/swagger-egg/commit/4846becd803e07d35edcde83f3f98b6bb162ebeb))
+* add egg-swagger-ts-schema-example ([1bc2ffc](https://github.com/JsonMa/swagger-egg/commit/1bc2ffcfa6168924b533918c04e46430b7ce31a9))
+* Add typescriptJsonSchema option to readme ([feb10e7](https://github.com/JsonMa/swagger-egg/commit/feb10e7533d300101dd629dc53159a8b7808d279))
+* update package-lock ([83db7b9](https://github.com/JsonMa/swagger-egg/commit/83db7b98e39d764aa4893ad9d0e7dde037f95e71))
+
+
+
 ## [1.5.2](https://github.com/JsonMa/swagger-egg/compare/v1.4.1...v1.5.2) (2022-03-10)
 
 
