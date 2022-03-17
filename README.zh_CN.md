@@ -38,7 +38,11 @@ $ npm i swagger-egg --save
 ```
 
 ## 插件使用
-Swagger-UI 以 [egg-static](https://github.com/eggjs/egg-static) 静态资源的形式进行访问，若`static.prefix`为默认值，则只需要打开`http://localhost:7001/public/index.html`即可获取到 Swagger-UI 页面。关于插件在项目中的使用，请参考这个[示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example) ！
+Swagger-UI 以 [egg-static](https://github.com/eggjs/egg-static) 静态资源的形式进行访问，若`static.prefix`为默认值，则只需要打开`http://localhost:7001/public/index.html`即可获取到 Swagger-UI 页面。关于插件在项目中的使用，请参考下面的示例:
+ 
+- [JS 项目示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example)
+- [TS 项目示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-example)
+- [TS Schema 项目示例 ](https://github.com/JsonMa/swagger-egg/tree/master/example/)
 
 ```js
 // {app_root}/config/plugin.js

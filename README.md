@@ -27,7 +27,7 @@
 <!--
 Description here.
 -->
-An egg-swagger plugin (support Typescript) for serving a [Swagger UI](https://swagger.io/tools/swagger-ui/), params should follow [JSON Schema](http://json-schema.org/specification.html) specification (recommend use [Ajv](https://github.com/ajv-validator/ajv))，using [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) schemas automatically generated from your controller JSDoc comments.
+An egg-swagger plugin (support Typescript) for serving a [Swagger UI](https://swagger.io/tools/swagger-ui/), params should follow [JSON Schema](http://json-schema.org/specification.html) specification (recommend use [Ajv](https://github.com/ajv-validator/ajv))，using [Swagger (OpenAPI v2)](https://swagger.io/specification/v2/) schemas automatically generated from your controller JSDoc comments. 
 
 **CAUTION**: Require Node.js 10.x or higher!
 
@@ -38,8 +38,11 @@ $ npm i swagger-egg --save
 ```
 
 ## Usage
-Here is an [Example](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example) ! Enable this plugin, visting `index.html` under `static resource directory` and you will get the Swagger UI page.
-
+Enable this plugin, visting `index.html` under `static resource directory` and you will get the Swagger UI page. Visiting `http://localhost:7001/public/index.html` to get the default `Swagger-UI` page.
+Project Example: 
+- [JS Example](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example)
+- [TS Example](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-example)
+- [TS Schema Example ](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-schema-example)
 ```js
 // {app_root}/config/plugin.js
 exports.swaggerEgg = {
