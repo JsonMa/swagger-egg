@@ -96,6 +96,7 @@ exports.swaggerEgg = {
         api_key: [], // select 'api_key' to security(defined in `securityDefinitions`)
       },
     ], // Cacution: security is array type
+    typescriptJsonSchema: false, // use typescript json schema. (see: https://github.com/YousefED/typescript-json-schema)
   }
 };
 ```
