@@ -223,7 +223,7 @@ NOTE:
   }
 ```
 
-### #responses {HttpStatus} {ResponseSchema} - {Description}
+### @description #responses {HttpStatus} {ResponseSchema} - {Description}
 
 `#responses` is used for declaring api response info.
 

@@ -223,7 +223,7 @@ JSDoc `@description`内容中的`#parameters`用于声明API Request Parameters.
   }
 ```
 
-### #responses {HttpStatus} {ResponseSchema} - {Description}
+### @description #responses {HttpStatus} {ResponseSchema} - {Description}
 
 JSDoc `@description`内容中的`#responses` 用于声明API Response。
 
