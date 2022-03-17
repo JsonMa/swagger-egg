@@ -42,7 +42,7 @@ Swagger-UI 以 [egg-static](https://github.com/eggjs/egg-static) 静态资源的
  
 - [JS 项目示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-example)
 - [TS 项目示例](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-example)
-- [TS Schema 项目示例 ](https://github.com/JsonMa/swagger-egg/tree/master/example/)
+- [TS Schema 项目示例 ](https://github.com/JsonMa/swagger-egg/tree/master/example/egg-swagger-ts-schema-example)
 
 ```js
 // {app_root}/config/plugin.js
