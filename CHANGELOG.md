@@ -1,3 +1,12 @@
+## [1.6.2](https://github.com/JsonMa/swagger-egg/compare/v1.6.1...v1.6.2) (2022-03-18)
+
+
+### Bug Fixes
+
+* :bug: fix parameter in path undefined bug ([f0d4015](https://github.com/JsonMa/swagger-egg/commit/f0d4015086f0ca149c2e47d80b2e7eda2fd1cfee))
+
+
+
 ## [1.6.1](https://github.com/JsonMa/swagger-egg/compare/v1.6.0...v1.6.1) (2022-03-18)
 
 
