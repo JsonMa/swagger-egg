@@ -1,3 +1,12 @@
+## [1.6.3](https://github.com/JsonMa/swagger-egg/compare/v1.6.2...v1.6.3) (2022-03-18)
+
+
+### Bug Fixes
+
+* :bug: fix path object not found bug ([7e83196](https://github.com/JsonMa/swagger-egg/commit/7e831963fc29b470508b393540ebc21b6f17d901))
+
+
+
 ## [1.6.2](https://github.com/JsonMa/swagger-egg/compare/v1.6.1...v1.6.2) (2022-03-18)
 
 
