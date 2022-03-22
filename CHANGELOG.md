@@ -1,3 +1,12 @@
+## [1.6.4](https://github.com/JsonMa/swagger-egg/compare/v1.6.3...v1.6.4) (2022-03-22)
+
+
+### Bug Fixes
+
+* :bug: fix same path coverd bug ([bb890ce](https://github.com/JsonMa/swagger-egg/commit/bb890ceb95119fa6654878ac6e89b05c0f78cbb0))
+
+
+
 ## [1.6.3](https://github.com/JsonMa/swagger-egg/compare/v1.6.2...v1.6.3) (2022-03-18)
 
 
