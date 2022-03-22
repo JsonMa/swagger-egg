@@ -12,16 +12,16 @@ class AppBootHook {
     let staticDirs = this.app.config.static.dir;
     // CAUTION: index.html under 'app/public' directory will be overwrite by 'swagger-ui-dist'
     if (Array.isArray(staticDirs)) staticDirs.unshift(pathToSwaggerUi);
-    else staticDirs = [ pathToSwaggerUi, staticDirs ];
+    else staticDirs = [pathToSwaggerUi, staticDirs];
     this.app.config.static.dir = staticDirs;
   }
 
   didLoad() {
     try {
       new Swagger(this.app, pathToSwaggerUi);
+      this.app.logger.info(`[swagger-egg] Swagger document initing succeed!`);
     } catch (error) {
-      error.message = `[swagger-egg]: ${error.message}`;
-      throw error;
+      this.app.logger.error(`[swagger-egg] ${error.message}`);
     }
   }
 }

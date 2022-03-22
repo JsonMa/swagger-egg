@@ -6,7 +6,7 @@ class AdminController extends Controller {
   /**
    * Index action #swagger-api
    *
-   * @summary This is index action summary
+   * @summary This is index action summarys
    * @function index
    * @memberof AdminController
    * @description #tags admin

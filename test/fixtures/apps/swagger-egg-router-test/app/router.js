@@ -16,7 +16,7 @@ module.exports = (app) => {
   router.get('/homes', controller.homeTest.index);
   router.get('/homes/new', controller.homeTest.new);
   router.get('/homes/:id', controller.homeTest.show);
-  router.get('/homes/:id/edit', controller.homeTest.edit);
+  router.patch('/homes/:id', controller.homeTest.edit);
   router.post('/homes', controller.homeTest.create);
   router.put('/homes/:id', controller.homeTest.update);
   router.delete('/homes/:id', controller.homeTest.destory);

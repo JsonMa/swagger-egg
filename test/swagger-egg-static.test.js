@@ -1,6 +1,8 @@
 'use strict';
 
 const mock = require('egg-mock');
+const globby = require('globby');
+const path = require('path');
 
 describe('test/swagger-egg.test.js', () => {
   let app;
@@ -14,16 +16,16 @@ describe('test/swagger-egg.test.js', () => {
   after(() => app.close());
   afterEach(mock.restore);
 
-  it('should GET /swagger/index.html', () => {
-    return app.httpRequest()
-      .get('/swagger/index.html')
-      .expect('Content-Type', 'text/html; charset=utf-8')
-      .expect(200);
+  it('should GET /index.html', () => {
+    return app.httpRequest().get('/index.html').expect('Content-Type', 'text/html; charset=utf-8').expect(200);
   });
 
-  it('should GET /swagger/swagger.json', () => {
-    return app.httpRequest()
-      .get('/swagger/swagger.json')
+  it('should GET /swagger.json', () => {
+    const targetPath = path.join(app.config.baseDir, 'app/public/swagger');
+    const targetFileName = globby.sync('**/*.(json)', {cwd: targetPath});
+    return app
+      .httpRequest()
+      .get(`/swagger/${targetFileName[0]}`)
       .expect('Content-Type', 'application/json; charset=utf-8')
       .expect(200);
   });
