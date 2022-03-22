@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/JsonMa/swagger-egg/compare/v1.6.4...v1.7.0) (2022-03-22)
+
+
+### Features
+
+* :sparkles: add file md5 to disable cache ([0a635ec](https://github.com/JsonMa/swagger-egg/commit/0a635ec9b6a24006911530f0d90aabcbc20bb18c))
+
+
+
 ## [1.6.4](https://github.com/JsonMa/swagger-egg/compare/v1.6.3...v1.6.4) (2022-03-22)
 
 
