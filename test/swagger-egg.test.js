@@ -1,7 +1,6 @@
 'use strict';
 
 const mock = require('egg-mock');
-const fs = require('fs');
 const path = require('path');
 
 describe('test/swagger-egg.test.js', () => {
