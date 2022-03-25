@@ -1,3 +1,11 @@
+## [1.7.2](https://github.com/JsonMa/swagger-egg/compare/v1.6.4...v1.7.2) (2022-03-25)
+
+
+### Bug Fixes
+
+* :bug: add swagger object to app instance ([3493664](https://github.com/JsonMa/swagger-egg/commit/3493664e18279d7a90aa181d8c7c54b3c21cf4e0))
+
+
 # [1.7.0](https://github.com/JsonMa/swagger-egg/compare/v1.6.4...v1.7.0) (2022-03-22)
 
 
