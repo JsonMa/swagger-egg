@@ -8,3 +8,5 @@ run/
 *.swp
 .vscode/
 package-lock.json
+.travis.yml
+.github/workflows/nodejs.yml
