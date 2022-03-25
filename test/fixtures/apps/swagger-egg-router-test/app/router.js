@@ -9,8 +9,8 @@ module.exports = (app) => {
   require('./router/admin')(app);
 
   // RESTful style router
-  router.resources('posts', '/api/posts', controller.posts);
-  router.resources('users', '/api/v1/users', controller.v1.users);
+  router.resources('posts', '/posts', controller.posts);
+  router.resources('users', '/users', controller.v1.users);
 
   // Common style router
   router.get('/homes', controller.homeTest.index);

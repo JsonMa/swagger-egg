@@ -3,7 +3,6 @@
 const Controller = require('egg').Controller;
 
 class UserController extends Controller {
-
   /**
    * Index action #swagger-api
    *
@@ -16,7 +15,7 @@ class UserController extends Controller {
    * @description #responses 200 schema.user - index response
    */
   async index() {
-    this.ctx.body = 'hi, index action' + this.app.plugins.swaggerEgg.name;
+    this.ctx.body = this.ctx.app.swagger.schema.user;
   }
 
   /**
