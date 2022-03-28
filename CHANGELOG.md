@@ -1,3 +1,18 @@
+## [1.7.3](https://github.com/JsonMa/swagger-egg/compare/v1.6.4...v1.7.3) (2022-03-28)
+
+
+### Bug Fixes
+
+* :bug: add swagger object to app instance ([3493664](https://github.com/JsonMa/swagger-egg/commit/3493664e18279d7a90aa181d8c7c54b3c21cf4e0))
+
+
+### Features
+
+* :sparkles: add file md5 to disable cache ([0a635ec](https://github.com/JsonMa/swagger-egg/commit/0a635ec9b6a24006911530f0d90aabcbc20bb18c))
+* :sparkles: add swagger ui config ([a318984](https://github.com/JsonMa/swagger-egg/commit/a318984e9c85b8d7b076396fabd05b1e6bd2f71f))
+
+
+
 ## [1.7.2](https://github.com/JsonMa/swagger-egg/compare/v1.6.4...v1.7.2) (2022-03-25)
 
 
