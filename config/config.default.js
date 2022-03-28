@@ -9,6 +9,12 @@ exports.swaggerEgg = {
   schema: {
     path: '/app/schema', // JSON Schema directory
   },
+  swaggerUI: {
+    deepLinking: true,
+    docExpansion: 'none',
+    filter: false,
+    syntaxHighlight: false,
+  },
   swagger: {
     host: '',
     basePath: '/',
@@ -17,5 +23,5 @@ exports.swaggerEgg = {
     produces: ['application/json'],
     tags: [],
   },
-  typescriptJsonSchema: false
+  typescriptJsonSchema: false,
 };
