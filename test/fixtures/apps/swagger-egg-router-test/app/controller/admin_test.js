@@ -12,7 +12,7 @@ class AdminController extends Controller {
    * @description #tags admin
    * @description #produces application/json
    * @description #parameters index query number true - index query parameter
-   * @description #responses 200 schema.admin - index response
+   * @description #responses 200 schema.adminTest - index response
    */
   async index() {
     this.ctx.body = 'hi, index action' + this.app.plugins.swaggerEgg.name;
@@ -28,7 +28,7 @@ class AdminController extends Controller {
    * @description #consumes application/x-www-form-urlencoded
    * @description #produces application/json
    * @description #parameters in body schema.admin true - new body parameter
-   * @description #responses 200 schema.admin - new response
+   * @description #responses 200 schema.adminTest - new response
    */
   async new() {
     this.ctx.body = 'hi, new action' + this.app.plugins.swaggerEgg.name;
@@ -43,7 +43,7 @@ class AdminController extends Controller {
    * @description #tags admin
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - show path parameter
-   * @description #responses 200 schema.admin - show response
+   * @description #responses 200 schema.adminTest - show response
    */
   async show() {
     this.ctx.body = 'hi, show action' + this.app.plugins.swaggerEgg.name;
@@ -60,7 +60,7 @@ class AdminController extends Controller {
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - edit path parameter
    * @description #parameters in body schema.admin true - edit body parameter
-   * @description #responses 200 schema.admin - edit response
+   * @description #responses 200 schema.adminTest - edit response
    */
   async edit() {
     this.ctx.body = 'hi, edit action ' + this.app.plugins.swaggerEgg.name;
@@ -76,7 +76,7 @@ class AdminController extends Controller {
    * @description #consumes application/x-www-form-urlencoded
    * @description #consumes application/json
    * @description #parameters in body schema.admin true - create body parameter
-   * @description #responses 200 schema.admin - create response
+   * @description #responses 200 schema.adminTest - create response
    */
   async create() {
     this.ctx.body = 'hi, create action ' + this.app.plugins.swaggerEgg.name;
@@ -93,7 +93,7 @@ class AdminController extends Controller {
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id true - update path parameter
    * @description #parameters id body schema.admin true - update body parameter
-   * @description #responses 200 schema.admin - update response
+   * @description #responses 200 schema.adminTest - update response
    */
   async update() {
     this.ctx.body = 'hi, update action ' + this.app.plugins.swaggerEgg.name;
@@ -109,7 +109,7 @@ class AdminController extends Controller {
    * @description #consumes application/json
    * @description #produces application/json
    * @description #parameters id path schema.definitions.id false - destory path parameter
-   * @description #responses 200 schema.admin - destory response
+   * @description #responses 200 schema.adminTest - destory response
    */
   async destory() {
     this.ctx.body = 'hi, destory action ' + this.app.plugins.swaggerEgg.name;
