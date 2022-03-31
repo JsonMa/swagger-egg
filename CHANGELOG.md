@@ -1,3 +1,12 @@
+## [1.7.5](https://github.com/JsonMa/swagger-egg/compare/v1.7.4...v1.7.5) (2022-03-31)
+
+
+### Bug Fixes
+
+* :bug: convert file name to camelCase ([e339da2](https://github.com/JsonMa/swagger-egg/commit/e339da230d39a0fb32a8a48a55bf21c7d5ddad5a))
+
+
+
 ## [1.7.3](https://github.com/JsonMa/swagger-egg/compare/v1.6.4...v1.7.3) (2022-03-28)
 
 
